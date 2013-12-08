@@ -1,0 +1,36 @@
+
+LisPy is a variation of lisp.
+
+Python3.3 is required to run programs.
+
+To make the lispy.py file executable, run make
+then to run a program type:
+lispy.py [program-name]
+
+Function definition
+==================
+
+(def (square x)
+  (* x x))
+
+Variable definition
+==================
+
+(def x 2)
+
+You could also use define instead of def by adding
+(def define def) at the top of every file.
+
+Printing
+==========
+(print "Prints with out a newline")
+(println "Prints with a newline")
+
+If Statement
+============
+
+(if (condition)
+  true-result
+  false-result)
+
+

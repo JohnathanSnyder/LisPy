@@ -1,0 +1,44 @@
+
+
+exprList : expr
+         | expr exprList
+
+expr : ID
+     | constant
+     | '(' 'quote' datum ')'
+     | ''' datum
+     | lambdaExpr
+     | ifExpr
+     | application
+
+
+application : '(' expr ')'
+            | '(' expr exprList ')'
+
+
+datum : BOOL
+      | INT
+      | FLOAT
+      | CHAR
+      | STRING
+      | ID
+      | list
+      | vector
+
+
+list : '(' ')'
+     | '(' datumList ')'
+     | '(' datumList '.' datum ')'
+     | abbreviation
+
+datumList : datum
+          | datum datumList
+
+abbreviation : ''' datum
+             | '`' datum
+
+vector : '#' '(' ')'
+       | '#' '(' datumList ')'
+
+
+
